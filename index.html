@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HelpUsFindMisho</title>
+
+  <style>
+    :root{
+      --c1:#EA7B7B;  /* soft pink */
+      --c2:#D25353;  /* main red */
+      --c3:#9E3B3B;  /* dark red */
+      --c4:#FFEAD3;  /* cream */
+    }
+
+    *{ box-sizing:border-box; margin:0; padding:0; }
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--c4);
+      color: var(--c3);
+      line-height: 1.6;
+    }
+
+    .container{
+      width: min(1000px, 92%);
+      margin: 0 auto;
+    }
+
+    header{
+      background: linear-gradient(135deg, var(--c2), var(--c3));
+      color: var(--c4);
+      padding: 28px 0;
+      border-bottom: 6px solid var(--c1);
+    }
+
+    header h1{
+      letter-spacing: 1px;
+      font-size: 40px;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+    header h2{
+      font-weight: 400;
+      opacity: 0.95;
+      font-size: 18px;
+    }
+
+    .card{
+      background: white;
+      margin: 22px auto;
+      border: 2px solid var(--c1);
+      border-radius: 14px;
+      padding: 18px;
+      box-shadow: 0 8px 18px rgba(158, 59, 59, 0.15);
+    }
+
+    .main{
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .photo{
+      border: 3px solid var(--c2);
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--c4);
+    }
+    .photo img{
+      width: 100%;
+      display:block;
+    }
+
+    .badge{
+      display:inline-block;
+      background: var(--c1);
+      color: var(--c3);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 13px;
+      border: 1px solid var(--c2);
+      margin-bottom: 10px;
+    }
+
+    .info h3{
+      font-size: 22px;
+      margin-bottom: 8px;
+      color: var(--c3);
+    }
+
+    ul{
+      margin-top: 10px;
+      padding-left: 18px;
+    }
+
+    .cta{
+      margin-top: 16px;
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .btn{
+      display:inline-block;
+      text-decoration:none;
+      background: var(--c2);
+      color: var(--c4);
+      padding: 10px 14px;
+      border-radius: 10px;
+      border: 2px solid var(--c3);
+      font-weight: 700;
+    }
+    .btn:hover{ filter: brightness(0.95); }
+
+    /* Fieldset + Legend box style */
+    fieldset{
+      margin-top: 18px;
+      border: 2px solid var(--c2);
+      border-radius: 12px;
+      padding: 14px;
+      background: var(--c4);
+    }
+    legend{
+      padding: 6px 10px;
+      border: 2px solid var(--c2);
+      background: white;
+      color: var(--c3);
+      border-radius: 10px;
+      font-weight: 700;
+    }
+
+    label{
+      display:block;
+      margin-top: 10px;
+      font-weight: 700;
+      color: var(--c3);
+    }
+    input, textarea{
+      width: 100%;
+      margin-top: 6px;
+      padding: 10px;
+      border: 2px solid var(--c1);
+      border-radius: 10px;
+      font-size: 14px;
+      outline: none;
+    }
+    input:focus, textarea:focus{
+      border-color: var(--c2);
+      box-shadow: 0 0 0 3px rgba(210, 83, 83, 0.15);
+    }
+
+    footer{
+      margin-top: 22px;
+      background: var(--c3);
+      color: var(--c4);
+      padding: 18px 0;
+      border-top: 6px solid var(--c1);
+    }
+    footer p{ opacity: 0.95; }
+
+    @media (max-width: 780px){
+      .main{ grid-template-columns: 1fr; }
+      header h1{ font-size: 34px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>Missing!</h1>
+      <h2>Help us find Misho</h2>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card main">
+      <div class="photo">
+        <img src="./WhatsApp Image 2026-01-02 at 7.52.45 PM.jpeg" alt="Misho image">
+      </div>
+
+      <div class="info">
+        <span class="badge">Please share this page</span>
+        <h3>Have you seen Misho?</h3>
+        <p>
+          We are urgently trying to locate Misho. If you have any information—small or big—please contact us.
+          Your help can make a difference. 
+        </p>
+
+        <p>
+          <br>She went missing at a Chuck E. Cheese restaurant in Riyadh.
+        </p>
+
+
+        <ul>
+  <li><b>Last seen:</b> Chuck E. Cheese, Riyadh (yes… the pizza place)</li>
+  <li><b>Date:</b> Yesterday-ish (time stopped making sense)</li>
+  <li><b>Clothing:</b> Too cute to be ignored</li>
+  <li><b>Notes:</b> Answers to “pspsps”, may have been lured by pizza 🍕</li>
+</ul>
+
+
+        <div class="cta">
+          <a class="btn" href="tel:+966500000000">Call Now</a>
+          <a class="btn" href="mailto:helpfindmisho@example.com">Email Us</a>
+        </div>
+
+        <!-- This is the "legend with a box" example -->
+        <fieldset>
+          <legend>Send a Tip</legend>
+
+          <label for="name">Your Name</label>
+          <input id="name" type="text" placeholder="Optional">
+
+          <label for="contact">Your Contact</label>
+          <input id="contact" type="text" placeholder="Phone or email">
+
+          <label for="tip">What did you see?</label>
+          <textarea id="tip" rows="4" placeholder="Location, time, details..."></textarea>
+
+          <div class="cta">
+            <a class="btn" href="#">Submit</a>
+          </div>
+        </fieldset>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><b>Contact:</b> helpfindmisho@example.com | +966 50 000 0000</p>
+      <p>© 2026 HelpUsFindMisho</p>
+    </div>
+  </footer>
+</body>
+</html>
